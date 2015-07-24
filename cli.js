@@ -2,21 +2,21 @@
 
 var meow = require('meow');
 
-var ttt = require('./');
+var ttle = require('./');
 
 var cli = meow({
   help: [
     'Usage',
-    ' $ ttt <url>',
+    ' $ ttle <url>',
     '',
     'Example',
-    ' $ ttt https://github.com',
+    ' $ ttle https://github.com',
     ''
   ]
 });
 
 
-ttt(cli.input[0], function (err, title) {
+ttle(cli.input[0], function (err, title) {
   if (err) {
     console.error(err.message);
     process.exit(1);
